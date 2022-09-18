@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <stdlib.h>
-// #define SCOREBOARD true
 
 using namespace std;
 
