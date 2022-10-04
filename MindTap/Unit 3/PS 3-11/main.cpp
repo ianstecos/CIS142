@@ -14,6 +14,9 @@ int main()
   cout << "Enter the amount of the reduced volume as a percentage: ";
   cin >> p;
 
+  /* The volume of a rectangular parallelepiped is l * w * h. If h is constant,
+  and l and w is reduced by the same amount, then the new l or w is 
+  l = l * sqrt(1 - (p / 100)) */
   l *= sqrt(1 - (p / 100));
   w *= sqrt(1 - (p / 100));
 
