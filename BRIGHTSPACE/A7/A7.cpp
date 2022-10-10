@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
   double amount, rest;
-  int quarters, dimes, nickels, pennies;
+  int quarters, dimes, nickels;
 
   cout << "Enter dollar amount: ";
   cin >> amount;
@@ -31,8 +31,7 @@ int main()
   cout << nickels << " nickels" << endl;
 
   rest = rest - nickels * 0.05;
-  pennies = rest / 0.01;
-  cout << pennies << " pennies" << endl;
+  cout << rest * 100 << " pennies" << endl;
 
   return 0;
 }
