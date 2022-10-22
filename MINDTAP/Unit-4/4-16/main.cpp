@@ -33,3 +33,44 @@ The program then outputs:
 rates and fixed royalties.)
 
 */
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int estimatedCopiesSold;
+    double bookNetPrice;
+    const double optionOne = 5000 + 20000;
+    double optionTwo, optionThree;
+
+    cout << "Number of copies that will be sold: ";
+    cin >> estimatedCopiesSold;
+
+    cout << "The net price of each copy of the novel: ";
+    cin >> bookNetPrice;
+
+    optionTwo = estimatedCopiesSold * bookNetPrice * 0.125;
+    
+    if (estimatedCopiesSold >= 4000) {
+      optionThree = 0.1 * bookNetPrice * 4000 + 0.14 * bookNetPrice * (estimatedCopiesSold - 4000);
+    } else {
+      optionThree = 0.1 * bookNetPrice * estimatedCopiesSold;
+    }
+
+    cout << fixed << setprecision(2);
+
+    cout << "Option 1: " << optionOne << " dollars" << endl;
+    cout << "Option 2: " << optionTwo << " dollars" << endl;
+    cout << "Option 3: " << optionThree << " dollars" << endl;
+
+    if (optionOne >= optionTwo && optionOne >= optionThree) {
+      cout << "Option 1 is the best" << endl;
+    } else if (optionTwo >= optionOne && optionTwo >= optionThree) {
+      cout << "Option 2 is the best" << endl;
+    } else if (optionThree >= optionOne && optionThree >= optionTwo) {
+      cout << "Option 3 is the best" << endl;
+    }
+
+    return 0;
+}
