@@ -12,7 +12,7 @@ Write a program that uses while loops to perform the following steps:
    - Separate each number with a space
 3. Output the sum of all even numbers between firstNum and secondNum.
 4. Output the numbers and their squares between 1 and 10.
-5. Output the sum of the square of the odd numbers between firstNum and 
+5. Output the sum of the square of the odd numbers between firstNum and
    secondNum.
 6. Output all uppercase letters.
    - Separate each letter with a space
@@ -32,43 +32,43 @@ bool isEven(int n) {
 }
 
 int main() {
-    int firstNum, secondNum, currentNumber;
-    int sumEven = 0, sumOddSquare = 0;
-    char ch;
+  int firstNum, secondNum, currentNumber;
+  int sumEven = 0, sumOddSquare = 0;
+  char ch;
 
-    cout << "!!! First integer must be smaller !!!" << endl;
-    cout << "Enter two integers: ";
-    cin >> firstNum >> secondNum;
+  cout << "!!! First integer must be smaller !!!" << endl;
+  cout << "Enter two integers: ";
+  cin >> firstNum >> secondNum;
 
-    currentNumber = firstNum;
+  currentNumber = firstNum;
 
-    cout << "Odd numbers between " << firstNum 
-         << " and " << secondNum << ":" << endl;
+  cout << "Odd numbers between " << firstNum
+       << " and " << secondNum << ":" << endl;
 
-    while (currentNumber <= secondNum) {
-      if (!isEven(currentNumber)) {
-        cout << currentNumber << " ";
-        sumOddSquare += (currentNumber * currentNumber);
-        
-      } else {
-        sumEven += currentNumber;
-      }
-      currentNumber++;
+  while (currentNumber <= secondNum)
+  {
+    if (!isEven(currentNumber)) {
+      cout << currentNumber << " ";
+      sumOddSquare += (currentNumber * currentNumber);
+    } else {
+      sumEven += currentNumber;
     }
+    currentNumber++;
+  }
 
-    cout << endl;
-    cout << "Sum of all even numbers is: " << sumEven << endl; 
+  cout << endl;
+  cout << "Sum of all even numbers is: " << sumEven << endl;
 
-    for (int i = 1; i <= 10; i++) {
-      cout << i << " " << i * i << endl;
-    }
+  for (int i = 1; i <= 10; i++) {
+    cout << i << " " << i * i << endl;
+  }
 
-    cout << "Sum of odd numbers squared is: " << sumOddSquare << endl;
+  cout << "Sum of odd numbers squared is: " << sumOddSquare << endl;
 
-    cout << "Uppercase Alphabets are:" << endl;
-    for(ch = 'A'; ch<= 'Z'; ch++){
-      cout  <<  ch  <<  " ";
-    }
+  cout << "Uppercase Alphabets are:" << endl;
+  for (ch = 'A'; ch <= 'Z'; ch++) {
+    cout << ch << " ";
+  }
 
-    return 0;
+  return 0;
 }
